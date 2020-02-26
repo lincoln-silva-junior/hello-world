@@ -17,17 +17,28 @@ import Inline from './components/Inline';
 import './appStyles.css'
 import styles from './appStyles.module.css'
 import Form from './components/Form';
+import MountLifeCycleA from './components/MountLifeCycleA';
+import UpdateLifeCycleA from './components/UpdateLifeCycleA';
+import FragmentDemo from './components/FragmentDemo';
+import Table from './components/Table';
+import PureComp from './components/PureComp';
+import ParentComp from './components/ParentComp';
 
 function App() {
   return (
     <div className="App">
-      <Form />
+      <ParentComp></ParentComp>
+      {/* <Table></Table> */}
+      {/* <FragmentDemo></FragmentDemo> */}
     </div>
   );
 }
 
 export default App;
 
+/* <UpdateLifeCycleA></UpdateLifeCycleA>       */
+/* <MountLifeCycleA></MountLifeCycleA> */
+/* <Form /> */
 /* <h1 className='error'>Error</h1> */
 /* <h1 className={ styles.success }>Success</h1> */
 /*<Inline></Inline>*/
