@@ -33,20 +33,36 @@ import ClickCounter from './components/ClickCounter';
 import HoverCounter from './components/HoverCounter';
 import ClickCounterTwo from './components/ClickCounterTwo';
 import HoverCounterTwo from './components/HoverCounterTwo';
+import CounterTwo from './components/CounterTwo';
+import ComponentC from './components/ComponentC';
+import { UserProvider } from './components/userContext';
 
 function App() {
   return (
     <div className="App">
-      <ClickCounterTwo />
-      <HoverCounterTwo />
-      {/* <ClickCounter name="Lincoln"/>      
-      <HoverCounter /> */}
+      <UserProvider value="Lincoln">
+        <ComponentC />
+      </UserProvider>      
     </div>
   );
 }
 
 export default App;
 
+/* <CounterTwo>
+        {(count, incrementCount) => (
+          <ClickCounterTwo count={count} incrementCount={incrementCount} />
+        )}
+    </CounterTwo>
+    <CounterTwo>
+        {(count, incrementCount) => (
+          <HoverCounterTwo count={count} incrementCount={incrementCount} />
+        )}
+    </CounterTwo> */
+/* <ClickCounterTwo />
+<HoverCounterTwo /> */
+/* <ClickCounter name="Lincoln"/>      
+<HoverCounter /> */
 /*<ErrorBoundary>
         <Hero heroName="Batman"></Hero>
       </ErrorBoundary>
